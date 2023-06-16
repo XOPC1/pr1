@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practic1</title>
+</head>
+<style>
+:root{
+    /* Colors */
+    --font-color:black;
+    --bg-color:white;
+    --special-color:rgb(179, 176, 42);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: var(--font-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+#header{
+    padding: 0 4px;
+    height: 60px;
+    background-color: aqua;
+    border-bottom: 3px solid var(--font-color);
+    box-shadow: 0 3px 0 var(--special-color);
+    display: flex;
+    justify-content: space-between;
+}
+.ss{
+    align-items: center;
+    display: flex;
+}
+.site-name{
+    margin-left: 6px;
+    font-size: 1.8em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.base-nav{
+    margin-left: 6px;
+    padding: 4px 8px;
+    border: 3px solid var(--font-color);
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition:all 0.1s;
+    box-shadow: 3px 3px 0 var(--special-color);
+}
+h1{
+  color: var(--special-color);
+  font: 20px Georgia;
+  
+}
+
+</style>
+<body>
+    <!-- <div id="header">
+        <h1>Шапка сайта<h1>
+            <div class="ss">
+                <div class="base-nav">empty</div>
+                <div class="base-nav">empty</div>
+                <div class="base-nav">empty</div>
+            </div>
+    </div> -->
+    <script>
+        function generateHeader(title, navitems, bgcolor, fontcolor){
+            document.write(`<div id="header" style="background-color: ${bgcolor}; color: ${fontcolor}">
+                            <h1>${title}</h1>
+                            <div class="ss">
+                                <div class="base-nav">${navitems[0]}</div>
+                                <div class="base-nav">${navitems[1]}</div>
+                                <div class="base-nav">${navitems[2]}</div>
+                            </div></div>`);
+
+        }
+        generateHeader(`SiteName`,['Тронный зал','2','AXAXAXAX'],`gold`,`white`);
+    </script>
+</body>
+</html>
